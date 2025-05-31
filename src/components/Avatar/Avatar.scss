@@ -1,0 +1,63 @@
+@use '../../styles/_variables.scss' as *;
+
+.hl-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hl-colors-secondary, #6f727c);
+  color: var(--hl-colors-white, #fff);
+  font-weight: var(--hl-font-weight-bold, 700);
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+
+  &--circle {
+    border-radius: 50%;
+  }
+  &--square {
+    border-radius: var(--hl-border-radius-small, 4px);
+  }
+
+  &--size-24 {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+  &--size-40 {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  &--size-60 {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hl-avatar__icon {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hl-avatar__initials {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+}

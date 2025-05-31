@@ -1,0 +1,94 @@
+// This file is for IDE support only and is not used at runtime.
+// It defines the CSS variables that are dynamically injected by StyleContext.tsx
+// through useCssVariablesInjection.ts.
+
+// Font sizes
+$hl-font-size-small: 12px;
+$hl-font-size-medium: 16px;
+$hl-font-size-large: 20px;
+
+// Line heights
+$hl-line-height-small: 1.2;
+$hl-line-height-medium: 1.5;
+$hl-line-height-large: 1.8;
+
+// Spacing
+$hl-spacing-small: 8px;
+$hl-spacing-medium: 16px;
+$hl-spacing-large: 24px;
+$hl-spacing-xLarge: 32px;
+
+// Border radius
+$hl-border-radius-small: 4px;
+$hl-border-radius-medium: 8px;
+$hl-border-radius-large: 12px;
+
+// Font weights
+$hl-font-weight-light: 300;
+$hl-font-weight-regular: 400;
+$hl-font-weight-medium: 500;
+$hl-font-weight-bold: 700;
+
+// Letter spacing
+$hl-letter-spacing-small: 0.5;
+$hl-letter-spacing-medium: 1;
+$hl-letter-spacing-large: 1.5;
+
+// Colors
+$hl-colors-primary: #307ABC;
+$hl-colors-secondary: #6F727C;
+$hl-colors-tertiary: #5CA2EC;
+$hl-colors-success: #67CC9D;
+$hl-colors-warning: #F58026;
+$hl-colors-danger: #F44123;
+$hl-colors-white: #FFFFFF;
+$hl-colors-black: #444855;
+$hl-colors-text: #444855; // Assuming text color is the same as black
+
+// Breakpoints
+$hl-breakpoints-mobile: 576px;
+$hl-breakpoints-tablet: 768px;
+$hl-breakpoints-desktop: 992px;
+
+// Map SCSS variables to CSS variables for IDE support
+:root {
+  --hl-font-size-small: #{$hl-font-size-small};
+  --hl-font-size-medium: #{$hl-font-size-medium};
+  --hl-font-size-large: #{$hl-font-size-large};
+
+  --hl-line-height-small: #{$hl-line-height-small};
+  --hl-line-height-medium: #{$hl-line-height-medium};
+  --hl-line-height-large: #{$hl-line-height-large};
+
+  --hl-spacing-small: #{$hl-spacing-small};
+  --hl-spacing-medium: #{$hl-spacing-medium};
+  --hl-spacing-large: #{$hl-spacing-large};
+  --hl-spacing-xLarge: #{$hl-spacing-xLarge};
+
+  --hl-border-radius-small: #{$hl-border-radius-small};
+  --hl-border-radius-medium: #{$hl-border-radius-medium};
+  --hl-border-radius-large: #{$hl-border-radius-large};
+
+  --hl-font-weight-light: #{$hl-font-weight-light};
+  --hl-font-weight-regular: #{$hl-font-weight-regular};
+  --hl-font-weight-medium: #{$hl-font-weight-medium};
+  --hl-font-weight-bold: #{$hl-font-weight-bold};
+
+  --hl-letter-spacing-small: #{$hl-letter-spacing-small};
+  --hl-letter-spacing-medium: #{$hl-letter-spacing-medium};
+  --hl-letter-spacing-large: #{$hl-letter-spacing-large};
+
+  --hl-colors-primary: #{$hl-colors-primary};
+  --hl-colors-secondary: #{$hl-colors-secondary};
+  --hl-colors-tertiary: #{$hl-colors-tertiary};
+  --hl-colors-success: #{$hl-colors-success};
+  --hl-colors-warning: #{$hl-colors-warning};
+  --hl-colors-danger: #{$hl-colors-danger};
+  --hl-colors-white: #{$hl-colors-white};
+  --hl-colors-black: #{$hl-colors-black};
+  --hl-colors-text: #{$hl-colors-text};
+
+  --hl-breakpoints-mobile: #{$hl-breakpoints-mobile};
+  --hl-breakpoints-tablet: #{$hl-breakpoints-tablet};
+  --hl-breakpoints-desktop: #{$hl-breakpoints-desktop};
+}
