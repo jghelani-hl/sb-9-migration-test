@@ -7,7 +7,7 @@ import '../src/styles/global.scss';
 import { initialStyleContext } from '../src/styles/StyleContext/initialStyleContext';
 import HLThemeLight, { HLThemeDark } from './HLTheme';
 import { addons } from 'storybook/preview-api';
-// import { DocsContainer } from '@storybook/addon-docs';
+import { DocsContainer } from '@storybook/addon-docs';
 
 import {
   DARK_MODE_EVENT_NAME,
@@ -30,26 +30,26 @@ const preview: Preview = {
       light: HLThemeLight,
       current: 'dark',
     },
-    // docs: {
-    //   codePanel: true,
-    //   // container: (props) => {
-    //   //   const [isDark, setDark] = React.useState();
+    docs: {
+      codePanel: true,
+      container: (props) => {
+        const [isDark, setDark] = React.useState();
 
-    //   //   React.useEffect(() => {
-    //   //     channel.on(DARK_MODE_EVENT_NAME, setDark);
-    //   //     return () => channel.removeListener(DARK_MODE_EVENT_NAME, setDark);
-    //   //   }, [channel, setDark]);
+        React.useEffect(() => {
+          channel.on(DARK_MODE_EVENT_NAME, setDark);
+          return () => channel.removeListener(DARK_MODE_EVENT_NAME, setDark);
+        }, [channel, setDark]);
 
-    //   //   return (
-    //   //     <div>
-    //   //       <DocsContainer
-    //   //         {...props}
-    //   //         theme={isDark ? HLThemeDark : HLThemeLight}
-    //   //       />
-    //   //     </div>
-    //   //   );
-    //   // },
-    // },
+        return (
+          <div>
+            <DocsContainer
+              {...props}
+              theme={isDark ? HLThemeDark : HLThemeLight}
+            />
+          </div>
+        );
+      },
+    },
   },
   tags: ['autodocs'],
   decorators: [
