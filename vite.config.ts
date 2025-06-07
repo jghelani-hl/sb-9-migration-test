@@ -21,7 +21,11 @@ const definedConfig = defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['@vueless/storybook-dark-mode', 'storybook/theming'],
+    include: [
+      '@vueless/storybook-dark-mode',
+      'storybook/theming',
+      '@storybook/addon-docs',
+    ],
   },
 });
 
