@@ -35,21 +35,71 @@ $hl-letter-spacing-medium: 1;
 $hl-letter-spacing-large: 1.5;
 
 // Colors
-$hl-colors-primary: #307ABC;
-$hl-colors-secondary: #6F727C;
-$hl-colors-tertiary: #5CA2EC;
-$hl-colors-success: #67CC9D;
-$hl-colors-warning: #F58026;
-$hl-colors-danger: #F44123;
-$hl-colors-white: #FFFFFF;
-$hl-colors-black: #444855;
+$hl-colors-grayDarkest: #444855; // $darkest-gray
+$hl-colors-grayDark: #6f727c; // $dark-gray
+$hl-colors-grayMedium: #999ba2; // $med-gray
+$hl-colors-grayLight: #c3c4c7; // $lt-gray
+$hl-colors-grayLightest: #dededf; // $ltest-gray
+$hl-colors-graySuperLight: #efefef; // $super-lt-gray
+
+$hl-colors-blueMedium: #307abc; // $med-blue
+$hl-colors-blueBright: #5ca2ec; // $bright-blue
+$hl-colors-blueLight: #a5c8ed; // $lt-blue
+$hl-colors-blueLightest: #d6e8fa; // $ltest-blue
+
+$hl-colors-orangeHighlight: #f58026; // $hl-orange
+$hl-colors-orangeLight: #feb97c; // $lt-orange
+$hl-colors-orangeLightest: #fce1c8; // $ltest-orange
+$hl-colors-orangeRed: #f44123; // $red-orange
+
+$hl-colors-coral: #f36750; // $coral
+$hl-colors-coralLight: #f99888; // $lt-coral
+$hl-colors-coralLightest: #fccfc8; // $ltest-coral
+
+$hl-colors-greenLight: #b3e5ce; // $lt-green
+$hl-colors-greenLightest: #ecf8f3; // $ltest-green
+$hl-colors-greenMedium: #67cc9d; // $med-green
+
 $hl-colors-text: #444855; // Assuming text color is the same as black
+
+// Additional colors for hover/active states and utility colors
+$hl-colors-grayMediumHover: #888a94;
+$hl-colors-grayMediumActive: #6f727c;
+$hl-colors-grayLightHover: #b0b1b6;
+$hl-colors-grayLightActive: #999ba2;
+
+$hl-colors-orangeHighlightHover: #e06e13;
+$hl-colors-orangeHighlightActive: #c95e0a;
+
+$hl-colors-coralHover: #e05a45;
+$hl-colors-coralActive: #c94d3a;
+
+$hl-colors-greenMediumHover: #4ebd85;
+$hl-colors-greenMediumActive: #399e6b;
+
+$hl-colors-red: #dc3545;
+$hl-colors-redHover: #b52a37;
+$hl-colors-redActive: #8e202a;
+
+$hl-colors-yellow: #ffc107;
+$hl-colors-yellowHover: #e0a800;
+$hl-colors-yellowActive: #c69500;
+
+$hl-colors-white: #fff;
+
+// Shadows
+$hl-shadow-default: 0 1px 4px rgba(0, 0, 0, 0.08);
+$hl-shadow-hover: 0 4px 16px 0 #0001;
+$hl-shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.2);
+$hl-shadow-side: 2px 0 10px rgba(0, 0, 0, 0.1);
+$hl-shadow-dropdown: 0 4px 16px rgba(68, 72, 85, 0.12);
+$hl-shadow-focus-success: 0 0 0 2px var(--hl-colors-success, #3ecf8e);
+$hl-shadow-none: none;
 
 // Breakpoints
 $hl-breakpoints-mobile: 576px;
 $hl-breakpoints-tablet: 768px;
 $hl-breakpoints-desktop: 992px;
-
 // Map SCSS variables to CSS variables for IDE support
 :root {
   --hl-font-size-small: #{$hl-font-size-small};
@@ -78,17 +128,66 @@ $hl-breakpoints-desktop: 992px;
   --hl-letter-spacing-medium: #{$hl-letter-spacing-medium};
   --hl-letter-spacing-large: #{$hl-letter-spacing-large};
 
-  --hl-colors-primary: #{$hl-colors-primary};
-  --hl-colors-secondary: #{$hl-colors-secondary};
-  --hl-colors-tertiary: #{$hl-colors-tertiary};
-  --hl-colors-success: #{$hl-colors-success};
-  --hl-colors-warning: #{$hl-colors-warning};
-  --hl-colors-danger: #{$hl-colors-danger};
-  --hl-colors-white: #{$hl-colors-white};
-  --hl-colors-black: #{$hl-colors-black};
+  --hl-colors-grayDarkest: #{$hl-colors-grayDarkest};
+  --hl-colors-grayDark: #{$hl-colors-grayDark};
+  --hl-colors-grayMedium: #{$hl-colors-grayMedium};
+  --hl-colors-grayLight: #{$hl-colors-grayLight};
+  --hl-colors-grayLightest: #{$hl-colors-grayLightest};
+  --hl-colors-graySuperLight: #{$hl-colors-graySuperLight};
+
+  --hl-colors-blueMedium: #{$hl-colors-blueMedium};
+  --hl-colors-blueBright: #{$hl-colors-blueBright};
+  --hl-colors-blueLight: #{$hl-colors-blueLight};
+  --hl-colors-blueLightest: #{$hl-colors-blueLightest};
+
+  --hl-colors-orangeHighlight: #{$hl-colors-orangeHighlight};
+  --hl-colors-orangeLight: #{$hl-colors-orangeLight};
+  --hl-colors-orangeLightest: #{$hl-colors-orangeLightest};
+  --hl-colors-orangeRed: #{$hl-colors-orangeRed};
+
+  --hl-colors-coral: #{$hl-colors-coral};
+  --hl-colors-coralLight: #{$hl-colors-coralLight};
+  --hl-colors-coralLightest: #{$hl-colors-coralLightest};
+
+  --hl-colors-greenLight: #{$hl-colors-greenLight};
+  --hl-colors-greenLightest: #{$hl-colors-greenLightest};
+  --hl-colors-greenMedium: #{$hl-colors-greenMedium};
+
   --hl-colors-text: #{$hl-colors-text};
+
+  --hl-colors-grayMediumHover: #{$hl-colors-grayMediumHover};
+  --hl-colors-grayMediumActive: #{$hl-colors-grayMediumActive};
+  --hl-colors-grayLightHover: #{$hl-colors-grayLightHover};
+  --hl-colors-grayLightActive: #{$hl-colors-grayLightActive};
+
+  --hl-colors-orangeHighlightHover: #{$hl-colors-orangeHighlightHover};
+  --hl-colors-orangeHighlightActive: #{$hl-colors-orangeHighlightActive};
+
+  --hl-colors-coralHover: #{$hl-colors-coralHover};
+  --hl-colors-coralActive: #{$hl-colors-coralActive};
+
+  --hl-colors-greenMediumHover: #{$hl-colors-greenMediumHover};
+  --hl-colors-greenMediumActive: #{$hl-colors-greenMediumActive};
+
+  --hl-colors-red: #{$hl-colors-red};
+  --hl-colors-redHover: #{$hl-colors-redHover};
+  --hl-colors-redActive: #{$hl-colors-redActive};
+
+  --hl-colors-yellow: #{$hl-colors-yellow};
+  --hl-colors-yellowHover: #{$hl-colors-yellowHover};
+  --hl-colors-yellowActive: #{$hl-colors-yellowActive};
+
+  --hl-colors-white: #{$hl-colors-white};
 
   --hl-breakpoints-mobile: #{$hl-breakpoints-mobile};
   --hl-breakpoints-tablet: #{$hl-breakpoints-tablet};
   --hl-breakpoints-desktop: #{$hl-breakpoints-desktop};
+
+  --hl-shadow-default: #{$hl-shadow-default};
+  --hl-shadow-hover: #{$hl-shadow-hover};
+  --hl-shadow-medium: #{$hl-shadow-medium};
+  --hl-shadow-side: #{$hl-shadow-side};
+  --hl-shadow-dropdown: #{$hl-shadow-dropdown};
+  --hl-shadow-focus-success: #{$hl-shadow-focus-success};
+  --hl-shadow-none: #{$hl-shadow-none};
 }
