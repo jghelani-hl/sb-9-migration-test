@@ -2,7 +2,6 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
-  defineWorkspace,
   defineProject,
   defineConfig,
   coverageConfigDefaults,
@@ -40,12 +39,22 @@ const testConfig = defineConfig({
   ],
   test: {
     ...storybookConfig.test,
+    coverage: {
+      enabled: true,
+      include: ['src/**/*.ts', 'src/**/*.tsx'],
+      exclude: [
+        ...coverageConfigDefaults.exclude,
+        '**/.storybook/**',
+        '**/storybook-static/**',
+        '**/*.stories.tsx',
+        'src/stories/Docs/**',
+        'src/index.ts',
+      ],
+    },
   },
 });
 
 const config = mergeConfig(viteConfig, testConfig);
 
-const workspaceConfig = defineWorkspace(['vite.config.ts', config]);
-
 // More info at: https://storybook.js.org/docs/writing-tests/test-addon
-export default workspaceConfig;
+export default config;
